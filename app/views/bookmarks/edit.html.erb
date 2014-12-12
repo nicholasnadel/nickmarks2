@@ -1,0 +1,10 @@
+<h1>Bookmarks#edit</h1>
+<p>Find me in app/views/bookmarks/edit.html.erb</p>
+<div class="col-md-8">
+  <%= form_for @bookmark do |f| %>
+    <div class="form-group">
+      <%= f.label :url %>
+      <%= f.text_field :url, class: 'form-control', placeholder: "Enter wiki title" %>
+    </div>
+  <% end %>
+</div>

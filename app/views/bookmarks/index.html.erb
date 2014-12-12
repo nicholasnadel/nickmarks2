@@ -1,0 +1,17 @@
+<h1>My Bookmarks</h1>
+<% @bookmarks.each do |bookmark| %>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img data-src="holder.js/300x300" alt="...">
+      <div class="caption">
+        <p><%= link_to bookmark.url, bookmark %> </p>
+        <p><%= bookmark.hashtags.map(&:title).join(', ') %></p>
+        
+        <p><a href="bookmarks#edit" class="btn btn-primary" role="Edit">Edit</a> <a href="#" class="btn btn-default" role="Delete">Delete</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>

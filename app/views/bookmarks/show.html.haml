@@ -1,0 +1,9 @@
+%h1=  @bookmark.url
+=  @bookmark.url 
+=  @hashtags
+
+<br>
+<br>
+= link_to "Edit", edit_bookmark_path, class: 'btn btn-success'
+<br>
+%p= button_to "Delete Nickmark", bookmark_path(@bookmark), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger'
