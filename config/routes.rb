@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   resources :bookmarks
   resources :welcome
 
+  post '/up-vote' => 'votes#up_vote', as: :up_vote
+  post '/down-vote' => 'votes#down_vote', as: :down_vote
+
+
   unauthenticated do
     root to: 'home#show', as: :unauthed_root
   end
